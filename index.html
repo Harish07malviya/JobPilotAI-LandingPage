@@ -3,57 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JobPilotAI — Your AI Job Hunting Assistant</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>JobPilotAI - Automate Your Job Search with AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #4338ca);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0 0 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0 0 30px;
+    }
+    .btn {
+      background: #22c55e;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .step {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      flex: 1 1 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+    }
+
+    #waitlist {
+      background: #4f46e5;
+      color: #fff;
+    }
+
+    #waitlist p {
+      font-size: 1.1rem;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto 0;
+      padding-bottom: 75%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background: #fff;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .trust-badge {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .steps {
+        flex-direction: column;
+      }
+      .iframe-container {
+        padding-bottom: 120%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>🚀 JobPilotAI</h1>
-      <p class="subtitle">The All-In-One Automated Job Assistant</p>
-      <p class="description">
-        Let AI find your perfect job, message HR, prep you for interviews, and guide you end-to-end — no more endless searching.
-      </p>
-      <a href="#signup" class="btn-primary">Join Beta Waitlist</a>
-    </div>
-  </section>
 
-  <!-- BENEFITS SECTION -->
-  <section class="benefits">
-    <h2>What JobPilotAI Does for You</h2>
-    <div class="benefit-grid">
-      <div class="benefit-item">✅ <strong>Smart Job Finder</strong><br/>Finds the best jobs automatically.</div>
-      <div class="benefit-item">✉️ <strong>Automated Outreach</strong><br/>Writes & sends personalized emails to HR.</div>
-      <div class="benefit-item">💬 <strong>AI Chatbot Assistant</strong><br/>Ask questions, get instant help 24/7.</div>
-      <div class="benefit-item">🎓 <strong>Interview Prep</strong><br/>See real interview questions for your role.</div>
-      <div class="benefit-item">🗂️ <strong>Experience Hub</strong><br/>Share & read real interview experiences.</div>
-    </div>
-  </section>
+  <!-- HERO -->
+  <header>
+    <h1>JobPilotAI 🚀</h1>
+    <p>Stop wasting hours applying for jobs. Let AI do the hard work — find jobs, reach recruiters, and prep for interviews faster than ever.</p>
+    <a href="#waitlist" class="btn">Join the Early Access Waitlist</a>
+  </header>
 
-  <!-- HOW IT WORKS SECTION -->
-  <section class="how-it-works">
+  <!-- HOW IT WORKS -->
+  <section>
     <h2>How It Works</h2>
-    <div class="steps-grid">
-      <div class="step-item">1️⃣ Create your profile: skills & goals.</div>
-      <div class="step-item">2️⃣ AI searches & shortlists jobs for you.</div>
-      <div class="step-item">3️⃣ Get instant help from chatbot anytime.</div>
-      <div class="step-item">4️⃣ Auto-send outreach emails/messages to HR.</div>
-      <div class="step-item">5️⃣ Prep with real interview questions — no surprises!</div>
+    <div class="steps">
+      <div class="step">
+        <h3>🔍 Smart Job Matching</h3>
+        <p>AI analyzes your profile to find the most relevant jobs — no more endless scrolling on job boards.</p>
+      </div>
+      <div class="step">
+        <h3>📨 Automated Outreach</h3>
+        <p>Instantly send personalized emails to HR and recruiters, crafted by AI to increase your response rate.</p>
+      </div>
+      <div class="step">
+        <h3>🤖 Interview Prep Bot</h3>
+        <p>Chat with an AI that predicts questions for your specific role and helps you practice your answers.</p>
+      </div>
     </div>
   </section>
 
-  <!-- SIGNUP SECTION -->
-  <section id="signup" class="signup">
-    <h2>Join the Beta Waitlist</h2>
-    <p>Be the first to try JobPilotAI — sign up below & we’ll invite you soon!</p>
-    <!-- Replace with your Google Form embed -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <!-- WAITLIST -->
+  <section id="waitlist">
+    <h2>🚀 Get Early Access + Free HR Email Templates</h2>
+    <p>Join 10+ early supporters and be the first to test JobPilotAI — plus get exclusive email templates to stand out with HR!</p>
+    <div class="iframe-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    <p class="trust-badge">🔒 100% privacy guaranteed — no spam, ever.</p>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+ <footer>
     <p>Built with ❤️ by <a href="https://github.com/Harish07malviya" target="_blank">Harish Malviya</a>. © 2025 JobPilotAI</p>
   </footer>
+
 </body>
 </html>
