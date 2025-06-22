@@ -3,226 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JobPilotAI - Automate Your Job Search with AI</title>
+  <title>JobPilotAI | Automate Your Job Search with AI</title>
+  <meta name="description" content="JobPilotAI helps you find jobs, contact recruiters, and prepare for interviews automatically with AI.">
+  <meta property="og:title" content="JobPilotAI | Automate Your Job Search with AI">
+  <meta property="og:description" content="Find jobs, contact recruiters, and ace interviews with AI — all automated.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="YOUR_SITE_URL_HERE">
+  <meta property="og:image" content="YOUR_SOCIAL_PREVIEW_IMAGE">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #111827;
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background: #ffffffdd;
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo-text {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #4f46e5;
-    }
-    .logo-text span {
-      color: #22c55e;
-    }
-
-    nav a {
-      background: #22c55e;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    nav a:hover {
-      background: #16a34a;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 120px 20px 80px;
-      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
-      color: #fff;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      max-width: 800px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 20px 0 40px;
-    }
-    .btn {
-      background: #22c55e;
-      color: #fff;
-      border: none;
-      padding: 15px 35px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #16a34a;
-    }
-
-    /* FEATURES */
-    section.features {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    section.features h2 {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 16px;
-      flex: 1 1 280px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    }
-    .card h3 {
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    /* WAITLIST */
-    #waitlist {
-      background: #4f46e5;
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    #waitlist h2 {
-      font-size: 2rem;
-    }
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 40px auto 0;
-      padding-bottom: 75%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-      background: #fff;
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 16px;
-    }
-    .trust {
-      font-size: 0.9rem;
-      margin-top: 15px;
-      opacity: 0.85;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: #9ca3af;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .cards {
-        flex-direction: column;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
 </head>
-
 <body>
 
-  <!-- NAV -->
+  <!-- NAVBAR -->
   <nav>
-    <div class="logo-text">JobPilot<span>AI</span></div>
-    <a href="#waitlist">Join Waitlist</a>
+    <div class="logo">JobPilot<span>AI</span></div>
+    <a href="#waitlist" class="btn-nav">Join Waitlist</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Automate Your Job Search with AI</h1>
-    <p>Save time, stand out, and land your dream job. JobPilotAI finds the best roles, contacts recruiters, and preps you for interviews — automatically.</p>
-    <a href="#waitlist" class="btn">Get Early Access</a>
+    <p>Save time, get matched with the best roles, contact recruiters, and ace interviews — effortlessly.</p>
+    <a href="#waitlist" class="btn-primary">Get Early Access</a>
   </section>
 
   <!-- FEATURES -->
   <section class="features">
-    <h2>How JobPilotAI Helps You</h2>
+    <h2>Why JobPilotAI?</h2>
     <div class="cards">
       <div class="card">
-        <h3>🔍 Smart Job Matching</h3>
-        <p>AI scans multiple job boards to match you with roles that perfectly fit your skills & interests.</p>
+        <h3>🔍 Smart Matching</h3>
+        <p>AI finds roles tailored to your skills and career goals — no more endless searching.</p>
       </div>
       <div class="card">
         <h3>📨 Automated Outreach</h3>
-        <p>Send customized, professional emails to HR and recruiters with zero effort — crafted by AI.</p>
+        <p>Send professional emails to HR & recruiters with AI-crafted templates — on autopilot.</p>
       </div>
       <div class="card">
-        <h3>🤖 AI Interview Prep</h3>
-        <p>Practice interview questions tailored to your job role with a friendly AI chatbot coach.</p>
+        <h3>🤖 AI Interview Coach</h3>
+        <p>Practice real interview questions with an AI coach, customized for your job title.</p>
       </div>
     </div>
   </section>
 
   <!-- WAITLIST -->
-  <section id="waitlist">
-    <h2>🚀 Join the Waitlist & Be First to Try JobPilotAI</h2>
-    <p>Early supporters get bonus HR email templates and priority access to new features.</p>
+  <section id="waitlist" class="waitlist">
+    <h2>🚀 Join the Waitlist</h2>
+    <p>Be the first to try JobPilotAI. Early birds get bonus features & priority access!</p>
     <div class="iframe-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/viewform?embedded=true" frameborder="0">Loading…</iframe>
     </div>
-    <p class="trust">🔒 No spam, ever. Only product updates and early access invites.</p>
+    <p class="trust">🔒 No spam. Just product updates & early invites.</p>
   </section>
 
   <!-- FOOTER -->
