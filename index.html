@@ -3,59 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JobPilotAI | Automate Your Job Search with AI</title>
-  <meta name="description" content="JobPilotAI helps you find jobs, contact recruiters, and prepare for interviews automatically with AI.">
-  <meta property="og:title" content="JobPilotAI | Automate Your Job Search with AI">
-  <meta property="og:description" content="Find jobs, contact recruiters, and ace interviews with AI — all automated.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="YOUR_SITE_URL_HERE">
-  <meta property="og:image" content="YOUR_SOCIAL_PREVIEW_IMAGE">
-  <link rel="stylesheet" href="style.css" />
+  <title>JobPilotAI - Automate Your Job Search with AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <nav>
-    <div class="logo">JobPilot<span>AI</span></div>
-    <a href="#waitlist" class="btn-nav">Join Waitlist</a>
+    <div class="logo-text">JobPilot<span>AI</span></div>
+    <a href="#request">Join Waitlist</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Automate Your Job Search with AI</h1>
-    <p>Save time, get matched with the best roles, contact recruiters, and ace interviews — effortlessly.</p>
-    <a href="#waitlist" class="btn-primary">Get Early Access</a>
+    <p>Save time, stand out, and land your dream job. JobPilotAI finds the best roles, contacts recruiters, and preps you for interviews — automatically.</p>
+    <a href="#request" class="btn">Join Waitlist</a>
   </section>
 
   <!-- FEATURES -->
   <section class="features">
-    <h2>Why JobPilotAI?</h2>
+    <h2>How JobPilotAI Helps You</h2>
     <div class="cards">
       <div class="card">
-        <h3>🔍 Smart Matching</h3>
-        <p>AI finds roles tailored to your skills and career goals — no more endless searching.</p>
+        <h3>🔍 Smart Job Matching</h3>
+        <p>AI scans multiple job boards to match you with roles that perfectly fit your skills & interests.</p>
       </div>
       <div class="card">
         <h3>📨 Automated Outreach</h3>
-        <p>Send professional emails to HR & recruiters with AI-crafted templates — on autopilot.</p>
+        <p>Send customized, professional emails to HR and recruiters with zero effort — crafted by AI.</p>
       </div>
       <div class="card">
-        <h3>🤖 AI Interview Coach</h3>
-        <p>Practice real interview questions with an AI coach, customized for your job title.</p>
+        <h3>🤖 AI Interview Prep</h3>
+        <p>Practice interview questions tailored to your job role with a friendly AI chatbot coach.</p>
       </div>
     </div>
   </section>
 
-  <!-- WAITLIST -->
-  <section id="waitlist" class="waitlist">
-    <h2>🚀 Join the Waitlist</h2>
-    <p>Be the first to try JobPilotAI. Early birds get bonus features & priority access!</p>
-    <div class="iframe-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/viewform?embedded=true" frameborder="0">Loading…</iframe>
-    </div>
-    <p class="trust">🔒 No spam. Just product updates & early invites.</p>
-  </section>
+  <!-- REQUEST ACCESS -->
+<section id="request">
+  <h2>🚀 Join the Waitlist</h2>
+  <p>Be first to try JobPilotAI — enter your email and get exclusive early access.</p>
+  <form 
+    id="waitlist-form"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfevTU2ikAQjIgeytb-g5sojtQ5PHbc5XYKofwc5Mm7gsj8Jg/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="showSuccess();">
+    <input 
+      type="email" 
+      name="entry.1167269748" 
+      placeholder="Enter your email address"
+      required>
+    <button type="submit" class="btn">Join Waitlist</button>
+  </form>
+  <p id="success-message" class="trust" style="display:none;">✅ Thank you! You’re on the waitlist — we’ll reach out soon.</p>
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <p class="trust">🔒 We respect your privacy. No spam — only updates and early invites.</p>
+</section>
+
+<script>
+  function showSuccess() {
+    // Slight delay to allow Google Form to accept data
+    setTimeout(function(){
+      document.getElementById('success-message').style.display = 'block';
+      document.getElementById('waitlist-form').reset();
+    }, 500);
+  }
+</script>
 
   <!-- FOOTER -->
   <footer>
